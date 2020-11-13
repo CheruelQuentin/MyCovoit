@@ -1,0 +1,7 @@
+{
+  "name": "MyCovoit",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
