@@ -1,7 +1,13 @@
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+<link href="//code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
+<script src="//code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Recherche
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +15,42 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Tab 1</ion-title>    
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-item>
+    <ion-label position="floating">Position actuelle</ion-label>
+    <ion-input placeholder="Position actuelle" type="string" id="PosAct" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Où se rendre</ion-label>
+    <ion-input placeholder="Où se rendre" type="string" id="Ordv"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-label position="floating">Date du déplacement</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2999-12-31" value="2002-09-23T15:03:46.789" id="DateDepla"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Heure de départ</ion-label>
+    <ion-datetime displayFormat="HH:mm" id="HeureDep"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombres de passagers</ion-label>
+    <ion-input placeholder="Nombres de passagers" type="number" min="1" id="nbPassa"></ion-input>
+  </ion-item>
+
+  <ion-content class="padding">
+    <div class = "row center">
+      <div class="col text-center">
+        <ion-button color="danger" type="reset">Reset</ion-button>
+      </div>
+      <div class="col text-center">
+        <ion-button color="success" type="submit" [routerLink]="['/tab4']" >Success</ion-button>
+      </div>
+    </div>
+  </ion-content>
 </ion-content>
