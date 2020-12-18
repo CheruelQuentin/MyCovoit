@@ -24,20 +24,20 @@ export class Tab1Page {
   }
  
   trajets: Observable<any[]>;
-  positionAct: string;
-  ouSeRendre: string;
+  TraLieuDepart: string;
+  TraLieuArriver: string;
   dateDeb: string;
-  heureDepa: string;
-  nbPassager: string;
+  TraHeureDepart: string;
+  TraNbPassager: string;
 
 
   addFirestore() {
-    this.firestore.collection('Trajet').add({
-        PositionActuelle: this.positionAct,
-        ouSeRendre: this.ouSeRendre,
+    this.firestore.collection('Trajets').add({
+        TraLieuDepart: this.TraLieuDepart,
+        TraLieuArriver: this.TraLieuArriver,
         dateDeb: this.dateDeb,
-        heureDepart: this.heureDepa,
-        nbPassager: this.nbPassager,
+        TraHeureDepart: this.TraHeureDepart,
+        TraNbPassager: this.TraNbPassager,
 
       });
   }

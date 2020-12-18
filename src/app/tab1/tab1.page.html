@@ -17,12 +17,12 @@
 
   <ion-item>
     <ion-label position="floating">Position actuelle</ion-label>
-    <ion-input [(ngModel)]="positionAct" placeholder="Position actuelle" type="string" id="PosAct" ></ion-input>
+    <ion-input [(ngModel)]="TraLieuDepart" placeholder="Position actuelle" type="string" id="PosAct" ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Où se rendre</ion-label>
-    <ion-input [(ngModel)]="ouSeRendre" placeholder="Où se rendre" type="string" id="Ordv"></ion-input>
+    <ion-input [(ngModel)]="TraLieuArriver" placeholder="Où se rendre" type="string" id="Ordv"></ion-input>
   </ion-item>
  
   <ion-item>
@@ -31,12 +31,12 @@
   </ion-item>
   <ion-item>
     <ion-label>Heure de départ</ion-label>
-    <ion-datetime [(ngModel)]="heureDepa" displayFormat="HH:mm" id="HeureDep"></ion-datetime>
+    <ion-datetime [(ngModel)]="TraHeureDepart" displayFormat="HH:mm" id="HeureDep"></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Nombres de passagers</ion-label>
-    <ion-input [(ngModel)]="nbPassager" placeholder="Nombres de passagers" type="number" min="1" id="nbPassa"></ion-input>
+    <ion-input [(ngModel)]="TraNbPassager" placeholder="Nombres de passagers" type="number" min="1" id="nbPassa"></ion-input>
   </ion-item>
 
   <ion-content class="padding">
