@@ -1,18 +1,38 @@
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-
 <link href="//code.ionicframework.com/1.0.0-beta.12/css/ionic.css" rel="stylesheet">
 <script src="//code.ionicframework.com/1.0.0-beta.12/js/ionic.bundle.js"></script>
-
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-center>
-    <ion-title size="medium">
-      Resultat
-    </ion-title></ion-center>
+    <ion-title>
+TAB 4 
+    </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 4</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
+<ion-item>
+  <ion-col>Position actuelle</ion-col>
+  <ion-col>Nombre de passager</ion-col>
+  <ion-col>Destination</ion-col>
+</ion-item>
+  
+
+
+  <ion-item *ngFor="let trajet of trajet | async">
+    <ion-label>{{ trajet.PositionActuelle }}</ion-label>
+    <ion-label>{{ trajet.nbPassager }}</ion-label>
+    <ion-label>{{ trajet.ouSeRendre }}</ion-label>
+    <ion-button  expand="block">Détail</ion-button>
+  </ion-item>
+
+ 
+
+
 
 </ion-content>

@@ -17,26 +17,26 @@
 
   <ion-item>
     <ion-label position="floating">Position actuelle</ion-label>
-    <ion-input placeholder="Position actuelle" type="string" id="PosAct" ></ion-input>
+    <ion-input [(ngModel)]="positionAct" placeholder="Position actuelle" type="string" id="PosAct" ></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Où se rendre</ion-label>
-    <ion-input placeholder="Où se rendre" type="string" id="Ordv"></ion-input>
+    <ion-input [(ngModel)]="ouSeRendre" placeholder="Où se rendre" type="string" id="Ordv"></ion-input>
   </ion-item>
  
   <ion-item>
     <ion-label position="floating">Date du déplacement</ion-label>
-    <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2999-12-31" value="2002-09-23T15:03:46.789" id="DateDepla"></ion-datetime>
+    <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2999-12-31" value="2002-09-23" [(ngModel)]="dateDeb" id="DateDepla"></ion-datetime>
   </ion-item>
   <ion-item>
     <ion-label>Heure de départ</ion-label>
-    <ion-datetime displayFormat="HH:mm" id="HeureDep"></ion-datetime>
+    <ion-datetime [(ngModel)]="heureDepa" displayFormat="HH:mm" id="HeureDep"></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label position="floating">Nombres de passagers</ion-label>
-    <ion-input placeholder="Nombres de passagers" type="number" min="1" id="nbPassa"></ion-input>
+    <ion-input [(ngModel)]="nbPassager" placeholder="Nombres de passagers" type="number" min="1" id="nbPassa"></ion-input>
   </ion-item>
 
   <ion-content class="padding">
@@ -45,7 +45,8 @@
         <ion-button color="danger" type="reset">Reset</ion-button>
       </div>
       <div class="col text-center">
-        <ion-button color="success" type="submit" [routerLink]="['/tabs/tab4']" >Success</ion-button>
+        <ion-button (click)="addFirestore()" color="success" type="submit" [routerLink]="['/tabs/tab4']" >Success</ion-button>
+        
       </div>
     </div>
   </ion-content>
